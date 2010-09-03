@@ -1,0 +1,90 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Email:</b>
+  <%= @sale.email %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @sale.quantity %>
+</p>
+
+<p>
+  <b>Auth request token:</b>
+  <%= @sale.auth_request_token %>
+</p>
+
+<p>
+  <b>Auth request:</b>
+  <%= @sale.auth_request_id %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @sale.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @sale.last_name %>
+</p>
+
+<p>
+  <b>Address 1:</b>
+  <%= @sale.address_1 %>
+</p>
+
+<p>
+  <b>Address 2:</b>
+  <%= @sale.address_2 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @sale.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @sale.state %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @sale.zip %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @sale.phone %>
+</p>
+
+<p>
+  <b>Card expiration:</b>
+  <%= @sale.card_expiration %>
+</p>
+
+<p>
+  <b>Card type:</b>
+  <%= @sale.card_type %>
+</p>
+
+<p>
+  <b>Gift first name:</b>
+  <%= @sale.gift_first_name %>
+</p>
+
+<p>
+  <b>Gift last name:</b>
+  <%= @sale.gift_last_name %>
+</p>
+
+<p>
+  <b>Gift email:</b>
+  <%= @sale.gift_email %>
+</p>
+
+
+<%= link_to 'Edit', edit_sale_path(@sale) %> |
+<%= link_to 'Back', sales_path %>

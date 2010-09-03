@@ -1,4 +1,16 @@
 Dailydeals::Application.routes.draw do
+  resources :payment_methods
+
+  resources :coupons
+
+  resources :locations
+
+  resources :sales
+
+  resources :deals
+
+  resources :businesses
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Cs subscription:</b>
+  <%= @payment_method.cs_subscription_id %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @payment_method.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @payment_method.last_name %>
+</p>
+
+<p>
+  <b>Address 1:</b>
+  <%= @payment_method.address_1 %>
+</p>
+
+<p>
+  <b>Address 2:</b>
+  <%= @payment_method.address_2 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @payment_method.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @payment_method.state %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @payment_method.zip %>
+</p>
+
+<p>
+  <b>Cc last 4:</b>
+  <%= @payment_method.cc_last_4 %>
+</p>
+
+<p>
+  <b>Cc type:</b>
+  <%= @payment_method.cc_type %>
+</p>
+
+<p>
+  <b>Cc exp month:</b>
+  <%= @payment_method.cc_exp_month %>
+</p>
+
+<p>
+  <b>Cc exp year:</b>
+  <%= @payment_method.cc_exp_year %>
+</p>
+
+
+<%= link_to 'Edit', edit_payment_method_path(@payment_method) %> |
+<%= link_to 'Back', payment_methods_path %>

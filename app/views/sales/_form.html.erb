@@ -1,0 +1,85 @@
+<%= form_for(@sale) do |f| %>
+  <% if @sale.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sale.errors.count, "error") %> prohibited this sale from being saved:</h2>
+
+      <ul>
+      <% @sale.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br />
+    <%= f.text_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :auth_request_token %><br />
+    <%= f.text_field :auth_request_token %>
+  </div>
+  <div class="field">
+    <%= f.label :auth_request_id %><br />
+    <%= f.text_field :auth_request_id %>
+  </div>
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :address_1 %><br />
+    <%= f.text_field :address_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :address_2 %><br />
+    <%= f.text_field :address_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :card_expiration %><br />
+    <%= f.date_select :card_expiration %>
+  </div>
+  <div class="field">
+    <%= f.label :card_type %><br />
+    <%= f.text_field :card_type %>
+  </div>
+  <div class="field">
+    <%= f.label :gift_first_name %><br />
+    <%= f.text_field :gift_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :gift_last_name %><br />
+    <%= f.text_field :gift_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :gift_email %><br />
+    <%= f.text_field :gift_email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

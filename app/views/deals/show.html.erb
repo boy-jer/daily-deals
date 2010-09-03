@@ -1,0 +1,95 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Intro:</b>
+  <%= @deal.intro %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @deal.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @deal.description %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%= @deal.day %>
+</p>
+
+<p>
+  <b>Photo:</b>
+  <%= @deal.photo %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @deal.price %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @deal.value %>
+</p>
+
+<p>
+  <b>Min:</b>
+  <%= @deal.min %>
+</p>
+
+<p>
+  <b>Max:</b>
+  <%= @deal.max %>
+</p>
+
+<p>
+  <b>Disclaimer:</b>
+  <%= @deal.disclaimer %>
+</p>
+
+<p>
+  <b>Details:</b>
+  <%= @deal.details %>
+</p>
+
+<p>
+  <b>Activated at:</b>
+  <%= @deal.activated_at %>
+</p>
+
+<p>
+  <b>Expires:</b>
+  <%= @deal.expires %>
+</p>
+
+<p>
+  <b>Coupon expires:</b>
+  <%= @deal.coupon_expires %>
+</p>
+
+<p>
+  <b>Hide:</b>
+  <%= @deal.hide %>
+</p>
+
+<p>
+  <b>Coupon instructions:</b>
+  <%= @deal.coupon_instructions %>
+</p>
+
+<p>
+  <b>Coupon limit:</b>
+  <%= @deal.coupon_limit %>
+</p>
+
+<p>
+  <b>Auths processed:</b>
+  <%= @deal.auths_processed %>
+</p>
+
+
+<%= link_to 'Edit', edit_deal_path(@deal) %> |
+<%= link_to 'Back', deals_path %>

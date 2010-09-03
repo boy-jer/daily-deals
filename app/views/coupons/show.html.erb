@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Code:</b>
+  <%= @coupon.code %>
+</p>
+
+<p>
+  <b>Expires:</b>
+  <%= @coupon.expires %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @coupon.name %>
+</p>
+
+<p>
+  <b>Activated at:</b>
+  <%= @coupon.activated_at %>
+</p>
+
+<p>
+  <b>Sent at:</b>
+  <%= @coupon.sent_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_coupon_path(@coupon) %> |
+<%= link_to 'Back', coupons_path %>

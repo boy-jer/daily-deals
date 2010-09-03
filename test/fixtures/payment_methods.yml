@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  cs_subscription_id: MyString
+  first_name: MyString
+  last_name: MyString
+  address_1: MyString
+  address_2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  cc_last_4: MyString
+  cc_type: MyString
+  cc_exp_month: MyString
+  cc_exp_year: MyString
+
+two:
+  cs_subscription_id: MyString
+  first_name: MyString
+  last_name: MyString
+  address_1: MyString
+  address_2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  cc_last_4: MyString
+  cc_type: MyString
+  cc_exp_month: MyString
+  cc_exp_year: MyString

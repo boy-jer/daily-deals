@@ -1,0 +1,55 @@
+<h1>Listing sales</h1>
+
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Quantity</th>
+    <th>Auth request token</th>
+    <th>Auth request</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Address 1</th>
+    <th>Address 2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Phone</th>
+    <th>Card expiration</th>
+    <th>Card type</th>
+    <th>Gift first name</th>
+    <th>Gift last name</th>
+    <th>Gift email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sales.each do |sale| %>
+  <tr>
+    <td><%= sale.email %></td>
+    <td><%= sale.quantity %></td>
+    <td><%= sale.auth_request_token %></td>
+    <td><%= sale.auth_request_id %></td>
+    <td><%= sale.first_name %></td>
+    <td><%= sale.last_name %></td>
+    <td><%= sale.address_1 %></td>
+    <td><%= sale.address_2 %></td>
+    <td><%= sale.city %></td>
+    <td><%= sale.state %></td>
+    <td><%= sale.zip %></td>
+    <td><%= sale.phone %></td>
+    <td><%= sale.card_expiration %></td>
+    <td><%= sale.card_type %></td>
+    <td><%= sale.gift_first_name %></td>
+    <td><%= sale.gift_last_name %></td>
+    <td><%= sale.gift_email %></td>
+    <td><%= link_to 'Show', sale %></td>
+    <td><%= link_to 'Edit', edit_sale_path(sale) %></td>
+    <td><%= link_to 'Destroy', sale, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sale', new_sale_path %>

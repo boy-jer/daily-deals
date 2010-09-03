@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  code: MyString
+  expires: 2010-09-03
+  name: MyString
+  activated_at: 2010-09-03 10:02:28
+  sent_at: 2010-09-03 10:02:28
+
+two:
+  code: MyString
+  expires: 2010-09-03
+  name: MyString
+  activated_at: 2010-09-03 10:02:28
+  sent_at: 2010-09-03 10:02:28

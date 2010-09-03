@@ -1,0 +1,39 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  email: MyString
+  quantity: 1
+  auth_request_token: MyString
+  auth_request_id: MyString
+  first_name: MyString
+  last_name: MyString
+  address_1: MyString
+  address_2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  phone: MyString
+  card_expiration: 2010-09-03
+  card_type: MyString
+  gift_first_name: MyString
+  gift_last_name: MyString
+  gift_email: MyString
+
+two:
+  email: MyString
+  quantity: 1
+  auth_request_token: MyString
+  auth_request_id: MyString
+  first_name: MyString
+  last_name: MyString
+  address_1: MyString
+  address_2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  phone: MyString
+  card_expiration: 2010-09-03
+  card_type: MyString
+  gift_first_name: MyString
+  gift_last_name: MyString
+  gift_email: MyString

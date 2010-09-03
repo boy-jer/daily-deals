@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @business.name %>
+</p>
+
+<p>
+  <b>Address 1:</b>
+  <%= @business.address_1 %>
+</p>
+
+<p>
+  <b>Address 2:</b>
+  <%= @business.address_2 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @business.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @business.state %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @business.zip %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @business.url %>
+</p>
+
+<p>
+  <b>Info:</b>
+  <%= @business.info %>
+</p>
+
+<p>
+  <b>Venue:</b>
+  <%= @business.venue_id %>
+</p>
+
+<p>
+  <b>Charity photo:</b>
+  <%= @business.charity_photo %>
+</p>
+
+<p>
+  <b>Charity text:</b>
+  <%= @business.charity_text %>
+</p>
+
+
+<%= link_to 'Edit', edit_business_path(@business) %> |
+<%= link_to 'Back', businesses_path %>

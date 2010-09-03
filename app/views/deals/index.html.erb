@@ -1,0 +1,57 @@
+<h1>Listing deals</h1>
+
+<table>
+  <tr>
+    <th>Intro</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Day</th>
+    <th>Photo</th>
+    <th>Price</th>
+    <th>Value</th>
+    <th>Min</th>
+    <th>Max</th>
+    <th>Disclaimer</th>
+    <th>Details</th>
+    <th>Activated at</th>
+    <th>Expires</th>
+    <th>Coupon expires</th>
+    <th>Hide</th>
+    <th>Coupon instructions</th>
+    <th>Coupon limit</th>
+    <th>Auths processed</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @deals.each do |deal| %>
+  <tr>
+    <td><%= deal.intro %></td>
+    <td><%= deal.title %></td>
+    <td><%= deal.description %></td>
+    <td><%= deal.day %></td>
+    <td><%= deal.photo %></td>
+    <td><%= deal.price %></td>
+    <td><%= deal.value %></td>
+    <td><%= deal.min %></td>
+    <td><%= deal.max %></td>
+    <td><%= deal.disclaimer %></td>
+    <td><%= deal.details %></td>
+    <td><%= deal.activated_at %></td>
+    <td><%= deal.expires %></td>
+    <td><%= deal.coupon_expires %></td>
+    <td><%= deal.hide %></td>
+    <td><%= deal.coupon_instructions %></td>
+    <td><%= deal.coupon_limit %></td>
+    <td><%= deal.auths_processed %></td>
+    <td><%= link_to 'Show', deal %></td>
+    <td><%= link_to 'Edit', edit_deal_path(deal) %></td>
+    <td><%= link_to 'Destroy', deal, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Deal', new_deal_path %>

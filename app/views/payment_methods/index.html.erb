@@ -1,0 +1,45 @@
+<h1>Listing payment_methods</h1>
+
+<table>
+  <tr>
+    <th>Cs subscription</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Address 1</th>
+    <th>Address 2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Cc last 4</th>
+    <th>Cc type</th>
+    <th>Cc exp month</th>
+    <th>Cc exp year</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @payment_methods.each do |payment_method| %>
+  <tr>
+    <td><%= payment_method.cs_subscription_id %></td>
+    <td><%= payment_method.first_name %></td>
+    <td><%= payment_method.last_name %></td>
+    <td><%= payment_method.address_1 %></td>
+    <td><%= payment_method.address_2 %></td>
+    <td><%= payment_method.city %></td>
+    <td><%= payment_method.state %></td>
+    <td><%= payment_method.zip %></td>
+    <td><%= payment_method.cc_last_4 %></td>
+    <td><%= payment_method.cc_type %></td>
+    <td><%= payment_method.cc_exp_month %></td>
+    <td><%= payment_method.cc_exp_year %></td>
+    <td><%= link_to 'Show', payment_method %></td>
+    <td><%= link_to 'Edit', edit_payment_method_path(payment_method) %></td>
+    <td><%= link_to 'Destroy', payment_method, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Payment method', new_payment_method_path %>

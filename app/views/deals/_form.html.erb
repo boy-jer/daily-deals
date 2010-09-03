@@ -1,0 +1,89 @@
+<%= form_for(@deal) do |f| %>
+  <% if @deal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@deal.errors.count, "error") %> prohibited this deal from being saved:</h2>
+
+      <ul>
+      <% @deal.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :intro %><br />
+    <%= f.text_field :intro %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :day %><br />
+    <%= f.date_select :day %>
+  </div>
+  <div class="field">
+    <%= f.label :photo %><br />
+    <%= f.text_field :photo %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br />
+    <%= f.text_field :value %>
+  </div>
+  <div class="field">
+    <%= f.label :min %><br />
+    <%= f.text_field :min %>
+  </div>
+  <div class="field">
+    <%= f.label :max %><br />
+    <%= f.text_field :max %>
+  </div>
+  <div class="field">
+    <%= f.label :disclaimer %><br />
+    <%= f.text_area :disclaimer %>
+  </div>
+  <div class="field">
+    <%= f.label :details %><br />
+    <%= f.text_area :details %>
+  </div>
+  <div class="field">
+    <%= f.label :activated_at %><br />
+    <%= f.datetime_select :activated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :expires %><br />
+    <%= f.date_select :expires %>
+  </div>
+  <div class="field">
+    <%= f.label :coupon_expires %><br />
+    <%= f.datetime_select :coupon_expires %>
+  </div>
+  <div class="field">
+    <%= f.label :hide %><br />
+    <%= f.check_box :hide %>
+  </div>
+  <div class="field">
+    <%= f.label :coupon_instructions %><br />
+    <%= f.text_area :coupon_instructions %>
+  </div>
+  <div class="field">
+    <%= f.label :coupon_limit %><br />
+    <%= f.text_field :coupon_limit %>
+  </div>
+  <div class="field">
+    <%= f.label :auths_processed %><br />
+    <%= f.check_box :auths_processed %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,65 @@
+<%= form_for(@payment_method) do |f| %>
+  <% if @payment_method.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@payment_method.errors.count, "error") %> prohibited this payment_method from being saved:</h2>
+
+      <ul>
+      <% @payment_method.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cs_subscription_id %><br />
+    <%= f.text_field :cs_subscription_id %>
+  </div>
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :address_1 %><br />
+    <%= f.text_field :address_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :address_2 %><br />
+    <%= f.text_field :address_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :cc_last_4 %><br />
+    <%= f.text_field :cc_last_4 %>
+  </div>
+  <div class="field">
+    <%= f.label :cc_type %><br />
+    <%= f.text_field :cc_type %>
+  </div>
+  <div class="field">
+    <%= f.label :cc_exp_month %><br />
+    <%= f.text_field :cc_exp_month %>
+  </div>
+  <div class="field">
+    <%= f.label :cc_exp_year %><br />
+    <%= f.text_field :cc_exp_year %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
