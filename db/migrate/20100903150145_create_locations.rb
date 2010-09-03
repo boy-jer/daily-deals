@@ -8,6 +8,7 @@ class CreateLocations < ActiveRecord::Migration
       t.string :state
       t.string :zip
       t.string :phone
+      t.integer :business_id
 
       t.timestamps
     end

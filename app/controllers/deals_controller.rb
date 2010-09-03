@@ -13,6 +13,7 @@ class DealsController < ApplicationController
   # GET /deals/1
   # GET /deals/1.xml
   def show
+    
     @deal = Deal.find(params[:id])
 
     respond_to do |format|
@@ -80,4 +81,15 @@ class DealsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def current
+    @deal = Deal.where(["day <= :today AND expires >= :today", {:today => Time.now.to_date}]).first
+
+    respond_to do |format|
+      format.html { render 'show' }# show.html.erb
+      format.xml  { render :xml => @deal }
+    end
+  end
+  
+  
 end

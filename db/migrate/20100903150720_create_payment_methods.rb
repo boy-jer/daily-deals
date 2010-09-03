@@ -13,6 +13,7 @@ class CreatePaymentMethods < ActiveRecord::Migration
       t.string :cc_type
       t.string :cc_exp_month
       t.string :cc_exp_year
+      t.integer :user_id
 
       t.timestamps
     end

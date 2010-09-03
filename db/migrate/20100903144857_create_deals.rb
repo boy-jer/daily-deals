@@ -19,6 +19,7 @@ class CreateDeals < ActiveRecord::Migration
       t.text :coupon_instructions
       t.integer :coupon_limit
       t.boolean :auths_processed
+      t.integer :business_id
 
       t.timestamps
     end

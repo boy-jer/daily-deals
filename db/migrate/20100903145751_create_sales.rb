@@ -18,6 +18,8 @@ class CreateSales < ActiveRecord::Migration
       t.string :gift_first_name
       t.string :gift_last_name
       t.string :gift_email
+      t.integer :user_id
+      t.integer :deals_id
 
       t.timestamps
     end

@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :birth_year
       t.string :zip
       t.boolean :subscribed
-
+      
       t.timestamps
     end
   end

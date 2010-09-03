@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100903165411) do
+ActiveRecord::Schema.define(:version => 20100903171505) do
 
   create_table "businesses", :force => true do |t|
     t.string   "name"
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(:version => 20100903165411) do
     t.string   "name"
     t.datetime "activated_at"
     t.datetime "sent_at"
+    t.integer  "location_id"
+    t.integer  "sale_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -57,6 +59,7 @@ ActiveRecord::Schema.define(:version => 20100903165411) do
     t.text     "coupon_instructions"
     t.integer  "coupon_limit"
     t.boolean  "auths_processed"
+    t.integer  "business_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -69,6 +72,7 @@ ActiveRecord::Schema.define(:version => 20100903165411) do
     t.string   "state"
     t.string   "zip"
     t.string   "phone"
+    t.integer  "business_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -86,6 +90,7 @@ ActiveRecord::Schema.define(:version => 20100903165411) do
     t.string   "cc_type"
     t.string   "cc_exp_month"
     t.string   "cc_exp_year"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -108,6 +113,8 @@ ActiveRecord::Schema.define(:version => 20100903165411) do
     t.string   "gift_first_name"
     t.string   "gift_last_name"
     t.string   "gift_email"
+    t.integer  "deal_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -121,6 +128,20 @@ ActiveRecord::Schema.define(:version => 20100903165411) do
     t.boolean  "subscribed"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email",                               :default => "", :null => false
+    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
+    t.string   "password_salt",                       :default => "", :null => false
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "reset_password_token"
+    t.string   "remember_token"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",                       :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
   end
 
 end
