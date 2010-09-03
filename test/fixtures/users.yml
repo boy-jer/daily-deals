@@ -3,6 +3,8 @@
 one:
   first_name: MyString
   last_name: MyString
+  email: MyString@My.String
+  encrypted_password: 9b517bdd6e78827a073323a30400469724bfdf99
   gender: MyString
   birth_year: 1
   zip: MyString
@@ -11,6 +13,8 @@ one:
 two:
   first_name: MyString
   last_name: MyString
+  email: MyString@My.String
+  encrypted_password: 9b517bdd6e78827a073323a30400469724bfdf99
   gender: MyString
   birth_year: 1
   zip: MyString
