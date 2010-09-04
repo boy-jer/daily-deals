@@ -1,0 +1,52 @@
+<div class="the_footer container_12">
+  <div class="mod scissors">
+    <ul class="bot_nav left mod f-left">
+      <li>             <%= link_to "Contact Us",    :contact     %></li>        
+      <li>             <%= link_to "How it works",  :howitworks  %></li>
+      <li>             <%= link_to "FAQs",          :faq         %></li>
+      <li>             <%= link_to "Terms of Sale", :termsofsale %></li>
+      <li>             <%= link_to "Terms of Use",  :termsofuse  %></li>
+      <li class="last"><%= link_to "Privacy",       :privacy     %></li>       
+      <div class="clear"></div>
+    </ul>
+    <ul class="f-right brand_nav">
+        <li><a href="/"><img src="/images/logo_small.png" alt="Daily Deals by Wimgo" /></a></li>
+        <li><a href="http://wimgo.com/" rel="external"><img src="/images/logo_wimgo_small.png" alt="Wimgo" /></a></li>
+        <li><a href="http://newsok.com/" rel="external"><img src="/images/logo_newsok_small.png" alt="NewsOk" /></a> </li>
+        <div class="clear"></div>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div class="footer_ad mod-ext">
+    <!-- ad -->
+    <div class="auto-center" style="width:728px;height:90px;">
+      <script>
+        if (typeof ord=='undefined') {ord=Math.random()*10000000000000000;}
+        document.write(
+          '<script src="http://ad.doubleclick.net/adj/okp.wimgo/dailydeals;dcopt=ist;sz=728x90;ord=' + ord + '?"><'+'/script>'
+        );
+      </script>
+      <noscript>
+        <a href="http://ad.doubleclick.net/jump/okp.wimgo/dailydeals;sz=728x90;ord=123456789?" target="_blank">
+          <img src="http://ad.doubleclick.net/ad/okp.wimgo/dailydeals;sz=728x90;ord=123456789?" width="728" height="90" alt="">
+        </a>
+      </noscript>
+    </div>
+  </div><!-- ad ends here -->
+  <div class="legal mod-ext center scp_color10 txt12">
+    Use of this site is subject to express <a href="/termsofuse">Terms of Use</a>. Copyright&copy; 2010 OPUBCO Communications Group | <a href="/privacy">Privacy Policy</a>.<br />
+    Wimgo&reg; is a registered trademark of The Oklahoma Publishing Company and/or its affiliates. Other names may be trademarks of their respective owners.
+  </div>
+  <br />
+</div>
+
+<script src="https://getsatisfaction.com.s3.amazonaws.com/javascripts/feedback-v2.js"></script>
+<script>
+  var feedback_widget_options = {};
+  feedback_widget_options.display = "overlay";  
+  feedback_widget_options.company = "wimgo";
+  feedback_widget_options.placement = "right";
+  feedback_widget_options.color = "#81BAD7";
+  feedback_widget_options.style = "problem";
+  var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>

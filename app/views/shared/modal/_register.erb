@@ -1,0 +1,34 @@
+<div id="reg-form" style="display:none;">
+  <div class="mod-reg">
+    <?php 
+      echo $this->Form->create('User', array('action' => 'register'));
+      echo $this->Form->input('first_name', array('label' => 'First Name:', 'class' => 'required'));
+      echo $this->Form->input('last_name', array('label' => 'Last Name:', 'class' => 'required'));
+      echo $this->Form->input('email', array('label' => 'Email:', 'id' => 'Register-User-Email', 'class' => 'required email'));
+      echo $this->Form->input('email_confirm', array('label' => 'Email <span class="light">(confirm)</span>:', 'class' => 'required email'));
+      echo $this->Form->input('password', array('label' => 'Password:', 'id' => 'Register-User-Password', 'class' => 'required'));
+      echo $this->Form->input('password_confirm', array('type' => 'password', 'label' => 'Password <span class="light">(confirm)</span>:', 'class' => 'required'));
+    ?>
+    <div class="clear divider"></div>
+    <label>
+      <?php echo $this->Form->checkbox('terms', array('div' => false, 'class' => 'checkbox required')); ?>
+      <small> I agree to the <a href="/pages/tou" target="_blank">Terms of Use</a> and <a href="/pages/privacy" target="_blank">Privacy Policy</a></small>
+    </label>
+    <?php 
+      echo $form->button('Submit', array('type' => 'submit', 'class' => 'submit rounded grn-gradient'));
+      echo $form->end();
+    ?>
+    <script>
+      $("#UserRegisterForm").validate({
+        rules: {
+          'data[User][password_confirm]': {
+            equalTo: "#Register-User-Password"
+          },
+          'data[User][email_confirm]': {
+            equalTo: "#Register-User-Email"
+          }
+        }
+      });
+    </script>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+<%= #TODO: Deals Company Info partial %>
+<div class="mod-ext grid-580 scp_bg_color5 comp_info">
+  <div class="the_deal_details_wrapper">
+    <div class="the_deal_details mod-ext grid-350 f-left">
+      <div class="title txt5 scp_color4">Detail:</div>
+      <div>
+        <h2 class="scp_color2"><?php echo $deal['Business']['name']; ?></h2>
+        <div class="deal_description">
+          <?php echo $markdown->parse($deal['Deal']['description']) ; ?>
+          <?php echo $markdown->parse($deal['Deal']['details']) ; ?>
+          <?php echo $markdown->parse($deal['Deal']['disclaimer']) ; ?>
+        </div>
+      </div>
+    </div><!--details ends here -->
+
+    <div class="company_info mod-ext grid-180 f-right">
+      <div class="txt5 scp_color4">Company Info:</div>
+      <h3 class="scp_color2">
+        <?php echo $deal['Business']['name']; ?>
+      </h3>
+      <div class="scp_color6 txt8">
+        <span class="txt9">
+          <a href="<?php echo $deal['Business']['url']; ?>" rel="external">
+            website
+          </a>
+        </span>
+        <br />
+        
+      <?php if (isset($deal['Business']['Location'])) { ?>
+        <ul class="mod">
+        <?php foreach ($deal['Business']['Location'] as $loc) { ?>
+          <li style="margin:15px 0 0;">
+            <?php echo $loc['title']; ?><br />
+            <?php echo $loc['address1']; ?><br />
+            <?php if (isset($loc['address2'])) { ?>
+            <?php echo $loc['address2']; ?>
+            <?php } ?>
+            <?php echo $loc['city']; ?>,
+            <?php echo $loc['state']; ?>
+            <?php echo $loc['zip']; ?><br />
+            <?php echo $loc['phone']; ?><br />
+          </li>
+        <?php } ?>
+        <div class="clear"></clear>
+        </ul>
+      <?php } ?>    
+        <a href="http://wimgo.com/business/<?php echo $deal['Business']['venue_id']; ?>" rel="external">
+          <?php echo $html->image('http://wimgodeals.wimgo.com/img/view_on_wimgo.png', array('alt' => 'View on Wimgo'))?>
+        </a>
+      </div>
+      <div class="mod sep_beige2"></div>
+      <div class="mod"><!-- charity piece -->
+        <div class="we_believe">
+          <div class="mod-ext scp_bg_color9 rounded txt1-small color0">
+            WE BELIEVE in GIVING
+          </div>
+        </div>
+        <div class="mod-ext rounded_bottom bg-color0" style="margin:-12px 0 0;">
+          <div class="mod-ext txt8">
+            <?php echo $deal['Business']['charity_text']; ?>
+          </div>
+          <div class="center">
+            <?php echo '<img src="http://s3.amazonaws.com/wimgo-deals/' . $deal['Business']['charity_photo'] . '" alt="" style="display:inline;" />'; ?>
+          </div>
+        </div>
+      </div><!-- charity piece ends here -->  
+    </div><!-- company info ends here -->
+    <div class="clear"></div>
+  </div>
+</div><!-- deal details end here -->
+<br />

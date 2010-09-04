@@ -1,0 +1,27 @@
+<div class="container_12">
+  <a href="/"><img src="/images/logo.jpg" alt="Daily Deals by Wimgo" class="wd_logo"></a>
+    <div id="nav" class="txt1">
+      <div class="mod-ext rounded daily_alerts_top scp_bg-color1">
+        <span class="txt1 scp_color0 f-left" style="text-indent:10px;">SIGN UP for DAILY ALERTS!</span>
+        <div class="clear"></div>
+      </div><!-- daily alerts subscription ends here -->
+      <div class="mod-ext rounded social scp_bg-color1 scp_color0 center txt15"> <!-- login/registration -->
+        <!-- Welcome, <a href='/users/settings' class='color0 underlined' title='View/Edit my settings'>" . $session->read('Auth.User.first_name') . "</a>  | <a href='/users/logout' class='scp_color0'>Logout</a> -->
+        <a href="#" class="scp_color0 reg">Create an Account</a> | <a href="#" id="sign-in" class="scp_color0">Sign In</a>
+      </div><!-- login / registration end here -->
+      <%#= render "shared/modal/buy_now" %>
+      <%#= render "shared/modal/register" %>
+      <%#= render "shared/modal/login" %>
+      <div class="clear"></div>
+
+      <ul class="nav">
+        <li><%= link_to_unless_current "Today's Deal", :current_deals                %></li>
+        <li><%= link_to_unless_current "Recent Deals", :deals                        %></li>
+        <li><%= link_to_unless_current "How it works", :howitworks                   %></li>
+        <li><%= link_to_unless_current "FAQs",         :faq,     :class => "faqs"    %></li>
+        <li><%= link_to_unless_current "Contact Us",   :contact, :class => "contact" %></li>        
+      </ul>
+      <div class="clear"></div>
+    </div>
+  <div class="clear"></div>
+</div>

@@ -1,0 +1,37 @@
+<div id="sign-in-form" style="display:none;">
+  <div class="mod-reg">
+    <div id="loginShow">
+      <?php 
+        echo $this->Form->create('User', array('action'   => 'login'));
+        echo $this->Form->input('email', array('label'    => 'Email:',    'class' => 'required email'));
+        echo $this->Form->input('password', array('label' => 'Password:', 'class' => 'required'));
+      ?>
+      <div class="clear"></div>
+      <a href="javascript:void(0);" onclick="$('#loginShow').fadeOut('slow', function () { $('#forgotPass').fadeIn('slow') });" class="blue">Forgot Password</a><br/>
+      <br/>
+      <?php echo $this->Form->checkbox('auto_login', array('div' => false, 'class' => 'checkbox')); ?>Keep me logged in on this computer.<br/>
+      <br/>
+      <?php echo $form->button('Submit', array('type' => 'submit', 'class' => 'submit rounded grn-gradient')); ?><br/>
+      <br/>
+      <a class="reg" href="/forgot-password">Don't have an account? Sign up!</a><br/>
+      <?php echo $form->end(); ?>
+      <script>$("#UserLoginForm").validate();</script>
+    </div>
+    <div id="forgotPass" style="display: none;">
+      <div style="width:300px;">
+        <strong>Forgot your password?</strong> It's okay...it happens to the best of us. Just give us your email address and we will help you out.
+      </div>
+      <br />
+      <?php 
+        echo $this->Form->create('User', array('action' => 'password'));
+        echo $this->Form->input('email', array('label' => 'Email:', 'class' => 'required email'));
+      ?>
+      <div class="clear"></div>
+      <?php echo $form->button('Submit', array('type' => 'submit', 'class' => 'submit rounded grn-gradient')); ?><br/>
+      <br/>
+      <a href="javascript:void(0);" onclick="$('#forgotPass').fadeOut('slow', function () { $('#loginShow').fadeIn('slow') });" class="blue">I remember...take me back to login</a><br/>
+      <br/>
+      <?php echo $form->end(); ?>
+    </div>
+  </div>
+</div>

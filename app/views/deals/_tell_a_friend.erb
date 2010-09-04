@@ -1,0 +1,26 @@
+<div class="tell_friends f-right">
+  <div class="txt7 scp_color2 center">
+    <div class="txt18" style="background:url(http://wimgodeals.wimgo.com/img/char_heart.jpg) right top no-repeat;width:130px;margin:0 auto;text-indent:-15px;">Help our Charities!</div>
+    Tell your friends.
+  </div>
+  <ul class="mod center">
+    <li>
+      <a href="http://www.facebook.com/sharer.php?u=<?php echo urlencode($html->url(array('controller' => 'deals', 'action' => 'index', 'today' => Inflector::slug($deal['Deal']['title'])), true)); ?>&t=<?php
+        echo urlencode($deal['Deal']['title']); ?>" rel="external" title="Tell your friends on Facebook">
+        <?php echo $html->image('http://wimgodeals.wimgo.com/img/facebook_35x35.png', array('alt' => 'Tell your friends on Facebook'))?>
+      </a>
+    </li>
+    <li>
+      <a href="http://twitter.com/home?status=<?php echo urlencode('Amazing Deal: ' . $deal['Deal']['title'] . ' - http://wim.gs/cxS66Z'); ?>" rel="external" title="Tell your friends on Twitter">
+        <?php echo $html->image('http://wimgodeals.wimgo.com/img/twitter_35x35.png', array('alt' => 'Tell your friends on Twitter'))?>
+      </a>
+    </li>
+    <li>
+      <a href="/deals/email" title="Tell your friends by email">
+        <?php echo $html->image('http://wimgodeals.wimgo.com/img/email_35x35.png', array('alt' => 'Tell your friends by email'))?>
+      </a>
+    </li>
+    <div class="clear"></div>
+  </ul>
+  <div class="clear"></div>
+</div><!-- tell friends ends here -->

@@ -1,5 +1,21 @@
 Dailydeals::Application.routes.draw do
 
+  resources :payment_methods
+
+  resources :coupons
+
+  resources :locations
+  
+  resources :businesses
+
+  resources :sales
+
+  resources :deals do
+    collection do
+      get 'current'
+    end
+  end
+  
   devise_for :users do
     get "/users/login" => "devise/sessions#new"
     get "/users/logout" => "devise/sessions#destroy"
@@ -10,23 +26,17 @@ Dailydeals::Application.routes.draw do
     get "/logout" => "devise/sessions#destroy"
   end
   
-  resources :users
-
-  resources :payment_methods
-
-  resources :coupons
-
-  resources :locations
-
-  resources :sales
-
-  resources :deals do
-    collection do
-      get 'current'
-    end
-  end
+  #Static routes
+  match "/contact",     :to => "pages#contact",                    :as => :contact
+  match "/howitworks",  :to => "pages#show", :id => "howitworks",  :as => :howitworks
+  match "/faq",         :to => "pages#show", :id => "faq",         :as => :faq
+  match "/termsofsale", :to => "pages#show", :id => "termsofsale", :as => :termsofsale
+  match "/termsofuse",  :to => "pages#show", :id => "termsofuse",  :as => :termsofuse
+  match "/privacy",     :to => "pages#show", :id => "privacy",     :as => :privacy
   
-  resources :businesses
+  # You can have the root of your site routed with "root"
+  # just remember to delete public/index.html.
+  root :to => "deals#current"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -74,10 +84,6 @@ Dailydeals::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  root :to => "deals#current"
 
   # See how all your routes lay out with "rake routes"
 

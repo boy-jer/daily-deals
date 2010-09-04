@@ -1,0 +1,45 @@
+<div id="buyNow-form" style="display:none">
+  <div class="mod-reg">
+    <div id="buyNow-inner"><!-- #buyNow-inner -->
+        <?php 
+          echo $this->Form->create('User', array('action' => 'login', 'id' => 'User-LoginForm'));
+          echo $this->Form->input('email', array('label' => 'Email Address:', 'id' => 'User-Email', 'class' => 'required email'));
+        ?>
+      <div class="clear divider" style="width:300px;margin-bottom:20px;border-color:#CCC;"></div>
+      <div class="mod txt8i scp_color11">Do you have a WimgoDeals Password?</div>
+      <?php
+        $options=array('No'=>'No, I am a new customer.','Yes'=>'Yes, I have a password:');
+        $attributes=array('legend'=>false);
+        echo $form->radio('status',$options,$attributes);
+      ?>
+      <?php
+        echo $this->Form->input('password', array('label' => false, 'type' => 'password'));
+      ?>
+      <br class="clear" />
+      <a href="javascript:void(0);" onclick="$('#buyNow-inner').fadeOut('slow', function () { $('#forgot-Pass').fadeIn('slow') });" class="blue">Forgot Password?</a><br /><br />
+      <?php 
+        echo $form->button('Continue', array('type' => 'submit', 'class' => 'submit rounded grn-gradient'));
+        echo $form->end();
+      ?>
+      <script>
+        $("#User-LoginForm").validate();
+      </script>
+    </div><!-- #buyNow-inner -->
+
+    <div id="forgot-Pass" style="display: none;"><!-- #forgot-Pass -->
+      <div style="width:300px;">
+        <strong>Forgot your password?</strong> It's okay...it happens to the best of us. Just give us your email address and we will help you out.
+      </div><br />
+      <?php 
+        echo $this->Form->create('User', array('action' => 'password', 'id' => 'User-PasswordForm'));
+        echo $this->Form->input('email', array('label' => 'Email:', 'class' => 'required email'));
+      ?>
+      <div class="clear"></div>
+      <?php echo $form->button('Submit', array('type' => 'submit', 'class' => 'submit rounded grn-gradient')); ?><br/><br/>
+      <a href="javascript:void(0);" onclick="$('#forgot-Pass').fadeOut('slow', function () { $('#buyNow-inner').fadeIn('slow') });" class="blue">
+        I remember...take me back to login
+      </a><br/><br/>
+      <?php echo $form->end(); ?>
+    </div><!-- #forgot-Pass -->
+  </div>
+</div>

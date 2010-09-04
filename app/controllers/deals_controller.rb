@@ -88,6 +88,7 @@ class DealsController < ApplicationController
     respond_to do |format|
       format.html { render 'show' }# show.html.erb
       format.xml  { render :xml => @deal }
+      format.rss  { render :rss => @deal }
     end
   end
   
